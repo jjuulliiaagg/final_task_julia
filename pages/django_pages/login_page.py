@@ -6,13 +6,13 @@ class LoginPage(BasePage):
 
     def login_is_present(self):
         login_f = self.find_element(LoginPageLocator.LOCATOR_LOGIN_TITLE).text
-        assert login_f == 'Django administration'
+        assert login_f == 'Django administration',\
+            f"{login_f} is not equal 'Django administration'"
 
-    #def login(self, user_name, user_passwd):
-    def login(self):
+    def login(self, config):
         username = self.find_element(LoginPageLocator.LOCATOR_USERNAME_FIELD)
-        username.send_keys('admin')
+        username.send_keys(config['ID'])
         passwd = self.find_element(LoginPageLocator.LOCATOR_PASSWORD_FIELD)
-        passwd.send_keys('password')
+        passwd.send_keys(config['PW'])
         sign_btn = self.find_element(LoginPageLocator.LOCATOR_LOG_IN_BTN)
         sign_btn.click()

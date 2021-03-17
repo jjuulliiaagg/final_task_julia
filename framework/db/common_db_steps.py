@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 class BaseDBSteps(object):
     def __init__(self, db_url):
         self.bind = create_engine(db_url)
-        self.session = Session(bind=self.bind, autoflush=True, autocommit=True)
+        self.session = Session(bind=self.bind, autocommit=True)
 
     @allure.step
     def fetch_all(self, sql, attach_to_report=False):
