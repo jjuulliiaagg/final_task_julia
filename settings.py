@@ -1,4 +1,4 @@
-HOST_DB = 'localhost'
+HOST_DB = '172.18.0.3'
 DB_USER = 'postgres'
 DB_PASS = 'postgres'
 DB_URL = f'postgresql://{DB_USER}:{DB_PASS}@{HOST_DB}/postgres'
