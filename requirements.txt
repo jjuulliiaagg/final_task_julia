@@ -1,0 +1,6 @@
+selenium==4.0.0b1
+pytest==6.2.2
+requests==2.25.1
+psycopg2-binary==2.8.6
+allure-pytest==2.8.36
+SQLAlchemy==1.4.0
