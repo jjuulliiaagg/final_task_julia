@@ -6,7 +6,7 @@ from time import sleep
 
 
 def test_group_create(browser):
-    group_exist = db_steps.check_if_group_exist()
+    group_exist = db_steps.check_group_exist()
     if group_exist:
         db_steps.group_delete()
         print('Group deleted')
