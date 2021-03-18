@@ -22,6 +22,7 @@ class AdminPage(BasePage):
         for group in group_list:
             if group_name in group.text:
                 exist = True
+                break
         assert exist, f"{group_name} group is not found in the list"
 
         print(group_list)

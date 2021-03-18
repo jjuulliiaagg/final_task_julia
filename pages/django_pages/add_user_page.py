@@ -17,13 +17,13 @@ class AddUserPage(BasePage):
         pswd.send_keys(password)
         c_pswd = self.find_element(AddUserPageLocator.LOCATOR_C_PASSWD_FIELD)
         c_pswd.send_keys(password)
-        save = self.find_element(AddUserPageLocator.LOCATOR_SAVE_BTN)
-        save.click()
+        save_btn = self.find_element(AddUserPageLocator.LOCATOR_SAVE_BTN)
+        save_btn.click()
         select_group = Select(self.find_element(
             AddUserPageLocator.LOCATOR_GROUPS_LIST))
         select_group.select_by_visible_text(group_name)
         user_to_group = self.find_element(
             AddUserPageLocator.LOCATOR_ADD_CHOSEN_GROUP)
         user_to_group.click()
-        save = self.find_element(AddUserPageLocator.LOCATOR_SAVE_BTN)
-        save.click()
+        save_btn = self.find_element(AddUserPageLocator.LOCATOR_SAVE_BTN)
+        save_btn.click()

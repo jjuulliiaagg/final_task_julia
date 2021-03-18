@@ -6,8 +6,8 @@ from pages.django_pages.add_user_page import AddUserPage
 from time import sleep
 
 
-def test_add_user_to_group(browser, setup):
-    group_name, username, password, config = setup
+def test_add_user_to_group(browser, setup_teardown):
+    group_name, username, password, config = setup_teardown
 
     main_page = MainPage(browser)
     main_page.open_base_page()

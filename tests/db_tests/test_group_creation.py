@@ -4,8 +4,8 @@ from pages.django_pages.admin_page import AdminPage
 from time import sleep
 
 
-def test_group_create(browser, setup):
-    group_name, username, password, config = setup
+def test_group_create(browser, setup_teardown):
+    group_name, username, password, config = setup_teardown
     main_page = MainPage(browser)
     main_page.open_base_page()
     main_page.open_login_page()
