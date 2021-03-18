@@ -26,7 +26,7 @@ def browser():
 
 @pytest.fixture
 def setup_teardown():
-    json_string = open('../../resources/data_for_django.json', 'r').read()
+    json_string = open('/Users/gahovichyuliya/PycharmProjects/final_task_julia/resources/data_for_django.json', 'r').read()
     config = json.loads(json_string)
 
     group_name = 'gr-' + str(time.time())
@@ -43,6 +43,6 @@ def setup_teardown():
 
 @pytest.fixture
 def api_setup():
-    json_string = open('../../resources/data_for_petstore.json', 'r').read()
+    json_string = open('/Users/gahovichyuliya/PycharmProjects/final_task_julia/resources/data_for_petstore.json', 'r').read()
     user_data = json.loads(json_string)
     yield user_data
