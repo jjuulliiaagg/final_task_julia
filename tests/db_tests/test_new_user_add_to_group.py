@@ -7,7 +7,7 @@ from time import sleep
 import allure
 
 
-@allure.story("Check that Group assigned to User is sent to DB")
+@allure.story("Check that added user to group is displayed in DB")
 def test_add_user_to_group(browser, setup_teardown):
     group_name, username, password, config = setup_teardown
     with allure.step("Open base page"):
