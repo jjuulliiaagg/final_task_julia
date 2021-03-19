@@ -8,8 +8,8 @@ import allure
 @allure.story("Check that created group in DB is isplayed in groups list")
 def test_group_create(browser, setup_teardown):
     group_name, username, password, config = setup_teardown
-    main_page = MainPage(browser)
     with allure.step("Open base page"):
+        main_page = MainPage(browser)
         main_page.open_base_page()
     with allure.step("Open login page"):
         main_page.open_login_page()
