@@ -25,7 +25,7 @@ def browser():
 
 
 @pytest.fixture
-def setup_teardown():
+def setup_teardown_django():
     json_string = open('./resources/data_for_django.json', 'r').read()
     # json_string = open('../../resources/data_for_django.json', 'r').read()
     config = json.loads(json_string)

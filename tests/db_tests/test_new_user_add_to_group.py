@@ -8,8 +8,8 @@ import allure
 
 
 @allure.story("Check that added user to group is displayed in DB")
-def test_add_user_to_group(browser, setup_teardown):
-    group_name, username, password, config = setup_teardown
+def test_add_user_to_group(browser, setup_teardown_django):
+    group_name, username, password, config = setup_teardown_django
     with allure.step("Open base page"):
         main_page = MainPage(browser)
         main_page.open_base_page()
